@@ -1,0 +1,32 @@
+/* p 태그 block -> inline으로 변경 */
+.inline{
+    display: inline;
+    background-color: blueviolet ;
+}
+
+.block{
+    display: block;
+    background-color: aqua;
+}
+
+.inline-block{
+    display: inline-block;
+    width: 50%;
+    height: 10vh;
+    background-color: rgb(96, 96, 174);
+}
+
+.none{
+    display: none;
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.to-block > button:active + .none{
+    display: block;
+}

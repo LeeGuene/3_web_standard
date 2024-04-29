@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea tag</title>
+    <style>
+        textarea{
+            outline: none;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="content" id="content" cols="30" rows="10">   
+        초기값
+    </textarea>
+
+    <!-- 실습 -->
+    <form action="#">
+        <fieldset>
+            <legend>게시판 글쓰기</legend>
+            <br>
+            <label for="title">제목 
+                <input id="title" type="text"/>
+            </label>
+            <br><br>
+            <label for="paragraph"></label>
+            <textarea id="paragraph" cols="20" rows="3"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>

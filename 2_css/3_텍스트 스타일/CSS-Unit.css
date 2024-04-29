@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* font-size속성은 부모로부터 자식에게 상속된다. */
+html{
+    font-size: 16px;
+    font-family: 'Pretendard-Regular';
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+    border: 3px solid red;
+}
+
+/* container의 font-size를 기준으로 적용 */
+.em{
+    font-size: 2em; /* 30 * 2 = 60px */
+}
+
+/* html 기본 px : 16px */
+.rem{
+    font-size: 2rem; /* 16 * 2 = 32px */
+}
+
+/* vw : 웹 브라우저 화면 너비를 기준으로 적용 */
+/* vh : 웹 브라우저 화면 높이를 기준으로 적용 */
+.view{
+    /* 웹 브라우저 화면의 너비가 1200px이면 5vw는 1200 * (5/100) = 60px */
+    font-size: 5vh;
+    width: 50vw;
+    height: 50vh;
+    background-color: aquamarine;
+}
+
+.percent{
+    width: 80%;
+    background-color: aqua;
+}

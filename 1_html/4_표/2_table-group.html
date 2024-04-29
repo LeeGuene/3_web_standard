@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table group</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <col style="width: 120px;">
+        <colgroup span="2" style="width: 200px; background-color: #eee;"></colgroup>
+        <col style="width: 80px;">
+        <caption><b>학생 관리 프로그램</b></caption>
+        <tr>
+            <th>번호</th>
+            <th>학생 이름</th>
+            <th>점수</th>
+            <th>학점</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>류호근</td>
+            <td>92</td>
+            <td>A등급</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td>김유신</td>
+            <td>75</td>
+            <td rowspan="2">C등급</td>
+        </tr>
+        <tr>
+            <!-- <td>3</td> -->
+            <td>장보고</td>
+            <td>93</td>
+            <!-- 4행 4열은 병합했으므로 생성하지 않는다. -->
+            <!-- <td>D등급</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">학생 정보</td>
+            <td colspan="2">학생 성적</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td colspan="4">비고</td>
+        </tr>
+    </table>
+</body>
+</html>

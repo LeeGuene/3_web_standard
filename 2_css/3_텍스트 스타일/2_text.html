@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-pen.css" rel="stylesheet">
+    <title>text 관련 css속성 테스트</title>
+</head>
+<body>
+    <style>
+        html{
+            /* 뒤쪽에 글꼴 유형을 지정 - 대체 글꼴 */
+            font-family: 'NanumPen', serif;
+        }
+        p{
+            font-size: 30px;
+        }
+        div{
+            margin-bottom: 50px;
+            width: 50%;
+            border: 3px solid burlywood;
+        }
+    </style>
+
+    <div>
+        <h1>font-family 속성</h1>
+        <p>폰트를 지정해 봅시다!</p>
+    </div>
+    
+    <div>
+        <h1>font-weight 속성</h1>
+        <p style="font-weight: bold;">폰트 굵기 bold로 설정</p>
+        <p style="font-weight: normal;">폰트 굵기 normal로 설정</p>
+    </div>
+    
+    <div>
+        <h1>font-style 속성</h1>
+        <p style="font-style: italic;">폰트 italic으로 설정</p>
+        <p style="font-style: oblique;">폰트 oblique로 설정</p>
+    </div>
+
+    <div>
+        <h1>text-align 속성</h1>
+        <p style="text-align: center;">정렬 center로 설정</p>
+        <p style="text-align: right;">정렬 right로 설정</p>
+        <p style="text-align: justify;">정렬 justify로 설정<br/>
+            justifyjustifyjustifyjustify<br/>
+        </p>
+
+    <div>
+        <h1>text-decoration 속성</h1>
+        <p style="color: red; text-decoration: overline;">overline으로 설정</p>
+        <p style="color: blue; text-decoration: underline;">underline으로 설정</p>
+        <p style="color: blueviolet; text-decoration: line-through;">line-through으로 설정</p>
+    </div>
+
+    <div>
+        <h1>line-height 속성</h1>
+        <p style="line-height: 10px;">
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+        </p>
+
+        <p style="line-height: 2;">
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+        </p>
+
+        <p style="line-height: 50%;">
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+            line-height을 px로 설정<br/>
+        </p>
+
+    </div>
+
+</body>
+</html>

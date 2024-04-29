@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        h3::before{
+            content: "★★★★";
+            /* content: "★★★★★"; */
+            color: aqua;
+            font-size: 49px;
+        }
+
+        h3::after{
+            content: "♠♠♠♠♠♠";
+            color: red;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <h3>가상 요소 중 가장 많이 활용되는 2가지!!</h3>
+    <h3></h3>
+    <h3></h3>
+    <h3></h3>
+
+    <p>나는 적용될까?</p>
+    <h3>나는 먹힐까??</h3>
+</body>
+</html>

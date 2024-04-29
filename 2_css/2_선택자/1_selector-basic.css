@@ -1,0 +1,28 @@
+/* * : 에스터리스크 */
+
+/* 전체 요소를 선택하는 선택자 */
+/* *{
+    color: burlywood;
+} */
+
+div{
+    color: cadetblue;
+}
+
+#id_selector{
+    color: rgb(122, 204, 80);
+}
+
+.class_selector{
+    background-color: rgb(121, 72, 168);
+}
+
+a[href]{
+    background-color: rgb(151, 78, 78);
+}
+
+a[target=_blank]{
+    background-color: yellow;
+
+}
+

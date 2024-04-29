@@ -1,0 +1,28 @@
+/* combinator selector */
+
+h1, p[class]{
+    color: cornflowerblue
+}
+
+p[class=color]{
+    font-size: 30px;
+}
+
+/* 자식 선택자 */
+#temp1 > div{
+    color: rgb(40, 133, 59);
+}
+
+/* 하위 선택자 */
+.temp2 p{
+    color: rgb(255, 0, 187);
+}
+
+/* 형제 선택자 */
+.temp3 + p{
+    background-color: bisque;
+}
+
+.temp4 ~ p{
+    background-color: chocolate;
+}

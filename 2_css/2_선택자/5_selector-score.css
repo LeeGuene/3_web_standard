@@ -1,0 +1,13 @@
+.class > .class2{
+    color: red;
+}
+
+#id{
+    color: pink;
+}
+
+.class{
+    color: darkblue;
+    font-size: 30px;
+}
+

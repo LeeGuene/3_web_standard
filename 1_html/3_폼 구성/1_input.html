@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input tag</title>
+    <style>
+        input{
+            display: block; /* input태그를 블록 요소로 만듬. */
+            margin-bottom: 4px; /* 아래쪽으로 여유를 줌. */
+        }
+        input[type="radio"]{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <!-- 한 줄 텍스트 입력 -->
+        <h3>input - id, pw</h3>
+        <input type="text" value="아이디">
+        <!-- <br><br> -->
+        <!-- 한 줄 텍스트 -> 텍스트가 안 보이게 함. (*로 보이게 함.) -->
+        <input type="password">
+        <!-- <br><br> -->
+        <h3>input - tel, number, url</h3>
+        <input type="tel">
+        <input type="number" step="10">
+        <input type="url">
+        <h3>input - color, date, checkbox, radio</h3>
+        <input type="color">
+        <!-- <br><br> -->
+        <input type="date">
+        <!-- <br><br> -->
+        <input type="checkbox">
+        
+        <label for="">
+            <input type="radio" name="sort" value="이름순"> 이름순
+        </label>
+        <!-- name 속성 : 서버에서의 변수와 매핑할 속성 -->
+        <!-- value 속성 : 서버에서의 변수에 들어있는 값 -->
+        <input type="radio" name="sort" value="최신순"> 최신순
+        <input type="radio" name="sort" value="조회순"> 조회순
+        <h3>input - email, file, submit, button, image</h3>
+        <input type="email">
+        <!-- <br><br> -->
+        <!-- multiple : 여러 개의 파일을 선택할 수 있게하는 속성 -->
+        <input type="file" multiple/>
+        <!-- 폼 전송 역할을 하는 버튼 요소 -->
+        <input type="button" value="버튼"/> 
+        <!-- 이미지에 버튼이 생긴다. -->
+        <input type="image" src="./download-img1.jfif" alt="다운로드 이미지">
+        
+        <h3>datetime</h3>
+        <input type="datetime">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        <input type="hidden">
+        <input type="range">
+        <input type="reset" value="form태그 내 값 초기화">
+        <input type="submit" value="전송"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+.img{
+    /* 배경 이미지 */
+    /* 이미지보다 영역이 크다면, 이미지가 바둑판 형식으로 나타남. */
+    /* 이미지보다 영역이 작다면, 이미지가 잘린다. */
+    background-image: url('./mountains-1761292_640.jpg');
+    width: 300px;
+    height: 300px;
+    border: 3px solid violet;
+
+    /* 이미지 반복여부 설정  */
+    background-repeat: no-repeat;
+    
+    /* 이미지 크기 설정  */
+    background-size: contain;
+
+    /* 이미지의 위치 조정 - 요소 내에서 */
+    background-position: center;
+}

@@ -1,0 +1,29 @@
+.margin, .padding{
+    width: 200px;
+    background-color: aqua;
+    text-align: center;
+    border: 2px solid rgb(18, 112, 112);
+    /* 내용이 텍스트만 있을 경우, padding 대신에 line-height로 설정할 수도 있다. */
+    line-height: 4;
+    /* margin: 20px 0; */
+    /* padding: 30px 0; */
+}
+
+.margin{
+    margin-bottom: 30px;
+}
+
+/* content-box : width값 내에 padding, border 제외 */
+/* border-box : width값 내에 padding, border 포함
+    ▷ padding을 주면 content영역의 width값이 "padding(좌,우) + border(좌. 우)"만큼 줄어든다.
+    ▷ content 영역의 width = 설정한 width - ( padding(좌,우) + border(좌,우) ) 
+*/
+.box{
+    box-sizing: border-box;
+    width: 100px; /* content영역의 width : 100 - (10 * 2  + 3 * 2) = 74px */
+    height: 100px; /* content영역의 height : 100 - (10 * 2  + 3 * 2) = 74px */
+    background-color: black;
+    color: white;
+    border: 3px solid burlywood;
+    padding: 10px;
+}

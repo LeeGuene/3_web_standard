@@ -1,0 +1,26 @@
+.gird-container{
+    display: grid;
+    background-color: lightblue;
+
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: 100px auto;
+    grid-template-rows: 100px auto;
+
+    /* 셀 간의 간격을 설정 */
+    grid-gap: 10px;
+    justify-items: center;
+
+    /* place-items: center; */
+
+}
+
+.grid-item{
+    line-height: 100px;
+    background-color: bisque;
+    color: chocolate;
+    border: 3px solid beige;
+    font-size: 20px;
+    /* text-align: center; */
+    font-weight: bold;
+}

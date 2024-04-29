@@ -1,0 +1,36 @@
+.flex-container{
+    display: flex;  
+    min-width: 80vw;
+    /* flex-direction : 주축 방향 설정 */
+    flex-direction: column; /* row, column, row-reverse, column-reverse */
+
+    /* 요소의 줄바꿈 여부를 설정 */
+    /* flex-wrap: nowrap;  */
+    /* no-wrap(기본값), wrap, wrap-reverse */
+
+    /* flex의 모든 속성 한 번에 설정(단축 속성) */
+    
+    /* 교차축 정렬방법 설정 */
+    /* align-items: stretch; */
+    
+    /* 주축 정렬방법 설정 */
+    /* justify-content: flex-end; */
+    
+
+}
+
+.flex-item{
+    flex-shrink: 0;
+    /* width: 100px; */
+    /* height와 line-height의 값을 동일하게 주면 텍스트가 수직상에서 가운데 정렬이 된다. */
+    height: 100px;
+    line-height: 100px;
+    background-color: bisque;
+    color: chocolate;
+    /* border: 3px solid beige; */
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
