@@ -6,3 +6,13 @@ console.log(user[0]);
 console.log(user[1]);
 console.log(user[2]);
 
+let obj = {
+    id : 'hoguen',
+    pw : '4556',
+    name : `류호근`,
+    age : 22,
+    loc : '수원시'
+};
+
+console.log(obj);
+console.log('나이 : ' + obj['age']);
