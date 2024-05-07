@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./2_selectElement.css">
+</head>
+<body>
+    <!-- name 속성값은 하이픈(-)으로 표기하지 않는다. -->
+    <!-- name 속성값은 바로 사용하는 경우가 있기 때문이다. -->
+    <form name="loginForm" id="login-form">
+        <h2>로그인 폼</h2>
+        <label for="uname">이름:</label>
+        <input type="text" id="uname" name="uname" placeholder="이름을 입력하세요">
+
+        <label for="age">나이:</label>
+        <input type="text" id="age" name="age" placeholder="나이를 입력하세요">
+
+        <label for="gender">성별:</label>
+        <select id="gender" name="gender">
+            <option value="male">남성</option>
+            <option value="female">여성</option>
+        </select>
+
+        <!-- 이벤트 리스너를 사용해야함. -->
+        <!-- submit : form의 action에 명시된 url로 데이터를 전달(기본 동작) -->
+        <!-- 데이터 전달하고 난 후 새로고침이 된다. -->
+        <button type="submit" onclick="check(event)">전송</button>
+    </form>
+</body>
+<script src="2_selectElement.js"></script>
+</html>
