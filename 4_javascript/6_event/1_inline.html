@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline event</title>
+</head>
+<body>
+    <button onclick="clickEvent(event)">클릭</button>
+    <button onmouseover="overEvent(event)" onmouseout="outEvent()">마우스 오버</button>
+    <script>
+        function clickEvent(e){
+            alert('클릭 이벤트 발생!!');
+        }
+        function overEvent(e){
+            console.log(e);
+            console.log('마우스가 올라왔어요!!');
+        }
+
+        function outEvent(e){
+            console.log("마우스가 떠나갔어요.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click 이벤트 실습</title>
+    <style>
+        div{
+            /* div 정렬 */
+            margin: 20px auto; 
+            /* button 정렬 */
+            text-align: center;
+        }
+
+        div#colorBox{
+            width: 400px;
+            height: 200px;
+            background-color: #ccc;
+            line-height: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        div > button{
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: 0.5s;
+            margin-top: 30px;
+        }
+
+        div > button:hover{
+            transform: rotateY(180deg);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="colorBox"></div>
+        <button>색 변경</button>
+    </div>
+    <script>
+        // const colorArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        // 16777215 24비트 색상의 최대값
+        // toString(16) : 16진수 문자열로 변환 메서드
+
+        console.log(Math.floor(Math.random() * 16777215));
+
+        const button = document.querySelector('button');
+        button.addEventListener('click', ()=>{
+            let randomColor =  + Math.floor(Math.random() * 16777215).toString(16);
+'#' 
+            button.previousElementSibling.style.background = randomColor;
+            button.previousElementSibling.textContent = randomColor;
+        });
+    </script>
+</body>
+</html>

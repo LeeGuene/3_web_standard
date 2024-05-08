@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_evenet cancel</title>
+</head>
+<body>
+    <a href="https://www.google.co.kr/?hl=ko">구글</a>
+    <a href="3_addEventListener.html">3_addEventListener</a>
+    <script>
+        const a = document.querySelector('a').nextElementSibling;
+        a.addEventListener('click', e=>{
+            e.preventDefault(); // a 태그의 기본동작(연결된 url로 이동) 방지
+            alert(a.text + "로 이동합니다.");
+            // location.href = 'https://www.google.co.kr/?hl=ko';
+            location.href = a.getAttribute('href');
+            location.back();
+
+        });
+    </script>
+</body>
+</html>

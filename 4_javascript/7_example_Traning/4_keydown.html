@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_keydown 실습</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #keyInfo {
+            text-align: center;
+            width: 200px;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: 0.4s;
+        }
+
+        #keyStatus {
+            text-align: center;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div id="keyInfo">키보드를 눌러보세요.</div>
+    <div id="keyStatus">누르기 전</div>
+    <script>
+        const keyInfo = document.querySelector('#keyInfo');
+        const keyStatus = document.querySelector('#keyStatus');
+
+        document.body.addEventListener('keydown', e=>{
+            keyInfo.textContent = `key Pressed : ${event.key} (Code : ${event.keyCode})`;
+            keyStatus.textContent = '누르는 중';
+            keyStatus.style.backgroundColor = 'blue';
+            keyInfo.style.width = '300px';
+        });
+        
+        document.body.addEventListener('keyup', ()=>{
+            keyInfo.textContent = '키보드를 눌러보세요.';
+            keyInfo.style.width = '200px';
+            keyStatus.textContent = '누르기 전';
+            keyStatus.style.backgroundColor = 'greenYellow';
+        })
+    </script>
+</body>
+</html>
