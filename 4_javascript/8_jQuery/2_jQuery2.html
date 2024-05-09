@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>jQuery - todo List 실습</title>
+</head>
+<style>
+    li{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        background-color: skyblue;
+        width: 300px;
+        padding: 10px 20px;
+    }
+    li > button{
+        color: red;
+    }
+</style>
+<body>
+    <h1>할 일 목록</h1>
+    <ul class="todo">
+        <li>
+            <input class="check" type="checkbox" />
+            <!-- <label for="input-text"></label> -->
+            <span class="todo-item">할 일 1</span>
+            <button class="delete">X</button>
+        </li>
+    </ul>  
+    <div>
+        <label for="new-list"></label>
+        <input id="new-list" type="text" placeholder="할 일 입력" />
+        <button id="add-btn">추가</button>
+        <button id="select-delete">선택 요소 삭제</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            let $todo = $('.todo');
+            let $btn = $('#add-btn');
+
+            // 할 일 추가
+            $btn.on('click', function(){
+                let newList = $('#new-list').val();
+
+                if(newList){
+                    $todo.append(`<li>
+                            <input class="check" type="checkbox" />
+                            <span class="todo-item">` + newList + `</span>
+                            <button class="delete">X</button>
+                        </li>`);
+
+                    $('#new-list').val(''); 
+                }else{
+                    alert('할 일을 먼저 입력해 주세요!!');
+                }
+            });
+
+            // input태그에 입력하고 난 뒤, Enter키를 쳐서 li 추가하기
+            $('#new-list').on('keypress', function(e){
+                if(e.keyCode === 13){ 
+                    console.log(e.keyCode);
+                    // 이미 정의된 #add-btn의 클릭 이벤트를 실행한다.
+                    $('#add-btn').click(); 
+                }
+            });
+
+            // 삭제버튼을 클릭하여 삭제하기
+            $todo.on('click', '.delete', function(){
+                $(this).closest('li').remove();
+            });
+            
+            // 체크박스에 체크된 li 삭제하기
+            $('#select-delete').on('click', function(){
+                // console.log($('.todo .check:checked').closest('li'));
+                $('.todo .check:checked').closest('li').remove();
+            });
+
+
+        });
+
+
+    </script>
+</body>
+</html>

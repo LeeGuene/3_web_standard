@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery test1</title>
+</head>
+<body>
+    <ul class="food">
+        <li>치킨</li>
+        <li>피자</li>
+        <li>짜장면</li>
+        <li>짬뽕</li>
+        <li>향어</li>
+        <li>연어</li>
+        <li>광어</li>
+        <li>잡채</li>
+    </ul>
+    <button id="btn">신기한 거</button>
+    <div>
+        <label for="new-food"></label>
+        <input type="text" id="new-food" placeholder="추가 음식 입력하세요." />
+        <button type="button" id="add-btn">추가</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        // html 문서 로딩 후에 실행하겠다는 의미
+        $(document).ready(function(){
+            let $ul = $('.food');
+            let $btn = $('#btn');
+            $('#add-btn').on('click', function(){
+                let newFood = $('#new-food').val();
+                
+                if(newFood){
+                    $ul.append('<li>' + newFood + '</li>');
+                    $('#new-food').val(''); // input태그 값 초기화
+                }else{
+                    alert('추가할 음식을 입력해 주세요!!');
+                }
+            });
+
+            $('#new-food').on('keypress', function(e){
+                if(e.keyCode === 13){ 
+                    console.log(e.keyCode);
+                    // 이미 정의된 #add-btn의 클릭 이벤트를 실행한다.
+                    $('#add-btn').click(); 
+                }
+            });
+
+            $btn.on('click', function(){
+                // $ul.hide(1000);
+                // $ul.show(1000);
+                // $ul.toggle(1000);
+                // $ul.slideToggle(1000);
+                // $ul.fadeToggle(1000);
+            });
+
+        });
+    </script>
+</body>
+</html>
